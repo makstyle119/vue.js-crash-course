@@ -2,6 +2,12 @@
 
 this is my journey to learn and understand VueJS.
 
+## Folder Structure
+```
+|- vue-with-cdn
+    |- index.html
+```
+
 ## Questions & Answers
 
 **Q1- What is VueJS?**
@@ -18,3 +24,9 @@ this is my journey to learn and understand VueJS.
 - Performance & Size.
 - Component-Based Architecture.
 - Active Community & Rich Ecosystem.
+
+# Getting Start
+- *CDN* - Include the CDN link in the HTML file. ( only for small/learning projects )
+- *Vue CLI* - Use Vue CLI to create a new project. ( no longer recommended )
+- *Create Vue* - use vite, which includes features like hot-reloading, out of box TypeScript and an ecosystem of plugins.
+- *Nuxt.js & Gridsome* - SSR & SSG frameworks.
