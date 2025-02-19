@@ -26,6 +26,35 @@
 </script>
 ```
 
+## Composition API - Long Form
+```html
+<script>
+  export default {
+    setup() {
+      const msg = 'Welcome to Your Vue.js App';
+      const status = 'active';
+      const tasks = [
+        'Task One',
+        'Task Two',
+        'Task Three'
+      ];
+      const link = 'https://www.google.com';
+      const toggleStatus = () => {
+        this.status = this.status === 'active' ? 'inactive' : 'active'
+      }
+
+      return {
+        msg,
+        status,
+        tasks,
+        link,
+        toggleStatus
+      }
+    }
+  }
+</script>
+```
+
 ## Directives
 ### v-if, v-else-if, v-else
 ````html
