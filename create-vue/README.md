@@ -177,3 +177,23 @@
     x
   </button>
 ````
+
+## Life Cycle Methods
+### onBeforeMount
+  - called before mounting the component
+### onMounted
+  - called after mounting the component
+### onBeforeUpdate
+  - called before updating the component
+### onUpdated
+  - called after updating the component
+### onBeforeUnmount
+  - called before unmounting/destroy the component
+### onUnmounted
+  - called after unmounting/destroy the component
+### onActivated
+  - called when the component is activated
+### onDeactivated
+  - called when the component is deactivated
+### onErrorCaptured
+  - called when an error is captured
