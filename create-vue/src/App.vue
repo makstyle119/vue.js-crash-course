@@ -1,28 +1,16 @@
-<script>
+<script setup>
   import { ref } from 'vue';
 
-  export default {
-    setup() {
-      const msg = ref('Welcome to Your Vue.js App');
-      const status = ref('active');
-      const tasks = ref([
-        'Task One',
-        'Task Two',
-        'Task Three'
-      ]);
-      const link = 'https://www.google.com';
-      const toggleStatus = () => {
-        status.value = status.value === 'active' ? 'inactive' : 'active'
-      }
-
-      return {
-        msg,
-        status,
-        tasks,
-        link,
-        toggleStatus
-      }
-    }
+  const msg = ref('Welcome to Your Vue.js App');
+  const status = ref('active');
+  const tasks = ref([
+    'Task One',
+    'Task Two',
+    'Task Three'
+  ]);
+  const link = 'https://www.google.com';
+  const toggleStatus = () => {
+    status.value = status.value === 'active' ? 'inactive' : 'active'
   }
 </script>
 

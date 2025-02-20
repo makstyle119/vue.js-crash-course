@@ -55,6 +55,25 @@
 </script>
 ```
 
+## Composition API - Short Form
+```html
+<script setup>
+  import { ref } from 'vue';
+
+  const msg = ref('Welcome to Your Vue.js App');
+  const status = ref('active');
+  const tasks = ref([
+    'Task One',
+    'Task Two',
+    'Task Three'
+  ]);
+  const link = 'https://www.google.com';
+  const toggleStatus = () => {
+    status.value = status.value === 'active' ? 'inactive' : 'active'
+  }
+</script>
+```
+
 ## Directives
 ### v-if, v-else-if, v-else
 ````html
