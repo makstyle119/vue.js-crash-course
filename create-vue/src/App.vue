@@ -8,9 +8,22 @@
     'Task Two',
     'Task Three'
   ]);
+  const newTask = ref('');
+
   const link = 'https://www.google.com';
+  
   const toggleStatus = () => {
     status.value = status.value === 'active' ? 'inactive' : 'active'
+  }
+
+  const addTask = () => {
+    if (!newTask.value.trim()) return;
+    tasks.value.push(newTask.value);
+    newTask.value = '';
+  }
+
+  const deleteTask = (index) => {
+    tasks.value.splice(index, 1);
   }
 </script>
 
@@ -33,15 +46,44 @@
   >
     User is something
   </p>
+
+  <form 
+    @submit.prevent="addTask"
+  >
+    <label 
+      for="newTask"
+    >
+      Add Task
+    </label>
+    <input 
+      type="text" 
+      id="newTask" 
+      name="newTask" 
+      v-model="newTask"
+    >
+    <button 
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+
   <h3>
     Tasks:
   </h3>
   <ul>
     <li
-      v-for="task in tasks"
+      v-for="(task, index) in tasks"
       :key="task"
     >
-      {{ task }}
+      <span>
+        {{ task }}
+      </span>
+      <button
+        @click="deleteTask(index)"
+      >
+        x
+      </button>
     </li>
   </ul>
   <!-- <a 

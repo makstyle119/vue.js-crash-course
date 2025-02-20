@@ -136,3 +136,44 @@
     Change status to inactive
   </button>
 ````
+
+## Form
+### @submit
+  - use to submit a form
+### @submit.prevent
+  - use to prevent a form from submitting
+### v-model
+  - use to bind a form input to a variable
+````html
+  <form 
+    @submit.prevent="addTask"
+  >
+    <label 
+      for="newTask"
+    >
+      Add Task
+    </label>
+    <input 
+      type="text" 
+      id="newTask" 
+      name="newTask" 
+      v-model="newTask"
+    >
+    <button 
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+````
+
+## button
+### @click
+  - use to bind a button to a function
+````html
+  <button
+    @click="deleteTask(index)"
+  >
+    x
+  </button>
+````
