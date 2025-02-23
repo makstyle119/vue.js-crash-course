@@ -183,6 +183,19 @@
   - called before mounting the component
 ### onMounted
   - called after mounting the component
+  ````html
+  <script>
+    onMounted(async () => {
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+      const data = await response.json();
+      tasks.value = data.map(task => task.title);
+    } catch (error) {
+      console.log(error);
+    }
+  })
+</script>
+  ````
 ### onBeforeUpdate
   - called before updating the component
 ### onUpdated
